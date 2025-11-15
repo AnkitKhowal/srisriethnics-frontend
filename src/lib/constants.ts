@@ -1,4 +1,10 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://y0pd1bhlca.execute-api.us-west-2.amazonaws.com';
+
+// Debug logging
+if (typeof window !== 'undefined') {
+  console.log('API_URL:', API_URL);
+  console.log('NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL);
+}
 export const CLOUDFRONT_URL = process.env.NEXT_PUBLIC_CLOUDFRONT_URL || '';
 export const PHONE = process.env.NEXT_PUBLIC_PHONE || '+91-1234567890';
 export const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '+911234567890';
