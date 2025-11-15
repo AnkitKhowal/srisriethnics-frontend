@@ -6,7 +6,11 @@ import ProtectedRoute from '@/components/ProtectedRoute';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isLoginPage = pathname === '/admin/login';
+  const isLoginPage = pathname === '/admin/login' || pathname === '/admin/login/';
+  
+  // Debug logging
+  console.log('Admin Layout - pathname:', pathname);
+  console.log('Admin Layout - isLoginPage:', isLoginPage);
 
   // Don't protect the login page
   if (isLoginPage) {
